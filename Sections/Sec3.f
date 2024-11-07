@@ -1,4 +1,5 @@
 C Array Multiplication of two square matrices
+C (N,N) = A(N,N) + B(N,N)
       REAL A(3,3), B(3,3), C(3,3)
       INTEGER N, I, J, K
 
