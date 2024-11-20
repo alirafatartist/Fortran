@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ass3"/>
+        <attribute name="authors" value="Ali"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-20 04:09:35 &#1589;"/>
+        <attribute name="created" value="QWxpO0RFU0tUT1AtNEhNNDVNNjsyMDI0LTExLTIwOzAyOjU5OjI1INi1OzQwMDk="/>
+        <attribute name="edited" value="QWxpO0RFU0tUT1AtNEhNNDVNNjsyMDI0LTExLTIwOzA0OjA5OjM1INi1OzI7NDExNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="heights" type="Integer" array="True" size="5"/>
+            <declare name="i, j, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the heights of 5 students:&quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the height of student number &quot; &amp; i+1" newline="True"/>
+                <input variable="heights[i]"/>
+            </for>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <for variable="j" start="i+1" end="4" direction="inc" step="1">
+                    <if expression="heights[i]&lt;heights[j]">
+                        <then>
+                            <assign variable="temp" expression="heights[i]"/>
+                            <assign variable="heights[i]" expression="heights[j]"/>
+                            <assign variable="heights[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Heights after sorting from largest to smallest:&quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="i==0">
+                    <then>
+                        <output expression="&quot;The 1st student's height is &quot; &amp; heights[i]" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="i==1">
+                            <then>
+                                <output expression="&quot;The 2nd student's height is &quot; &amp; heights[i]" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="i==2">
+                                    <then>
+                                        <output expression="&quot;The 3rd student's height is &quot; &amp; heights[i]" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;The &quot; &amp; i+1 &amp; &quot;th student's height is &quot; &amp; heights[i]" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

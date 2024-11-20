@@ -1,3 +1,5 @@
+      ! Make one column containes 5 rows
+      
       integer heights(5,1)
       integer i, j, temp
 
