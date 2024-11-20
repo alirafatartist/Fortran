@@ -23,3 +23,4 @@ C (N,N) = A(N,N) + B(N,N)
                   WRITE(*, *) 'C(', I, ',', J, ') = ', C(I, J)
 20    CONTINUE
       END
+ 
